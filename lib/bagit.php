@@ -1,4 +1,7 @@
 <?php
+
+namespace ScholarsLab\BagIt;
+
 /* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4: */
 
 /**
@@ -27,32 +30,18 @@
  * @link      https://github.com/erochest/BagItPHP
  *
  */
-
+/*
+use Archive_Tar;
+use ScholarsLab\BagIt\BagItException;
+use ScholarsLab\BagIt\BagItFetch;
+use ScholarsLab\BagIt\BagItManifest;
+use ScholarsLab\BagIt\BagItUtils;
+*/
 
 require_once 'Archive/Tar.php';
 require_once 'bagit_fetch.php';
 require_once 'bagit_manifest.php';
 require_once 'bagit_utils.php';
-
-
-/**
- * This is a class for all bag exceptions.
- *
- * @category   FileUtils
- * @package    Bagit
- * @subpackage Exception
- * @author     Eric Rochester <erochest@gmail.com>
- * @author     Wayne Graham <wayne.graham@gmail.com>
- * @copyright  2011 The Board and Visitors of the University of Virginia
- * @license    http://www.apache.org/licenses/LICENSE-2.0 Apache 2.0
- * @version    Release: <package_version>
- * @link       https://github.com/erochest/BagItPHP
- */
-class BagItException extends Exception
-{
-
-}
-
 
 /**
  * This is the main class for interacting with a bag.
