@@ -580,7 +580,7 @@ class BagIt
                 "$bagdir/manifest-sha1.txt"
             );
             try {
-                $this->manifest = new BagItManifest(
+                $this->manifest = new \BagItManifest(
                     $manifestFile,
                     $this->bagDirectory . '/',
                     $this->tagFileEncoding
@@ -598,14 +598,14 @@ class BagIt
                     "$bagdir/tagmanifest-md5.txt"),
                     "$bagdir/tagmanifest-sha1.txt"
                 );
-                $this->tagManifest = new BagItManifest(
+                $this->tagManifest = new \BagItManifest(
                     $manifestFile,
                     $this->bagDirectory . '/',
                     $this->tagFileEncoding
                 );
 
                 try {
-                    $this->fetch = new BagItFetch(
+                    $this->fetch = new \BagItFetch(
                         "{$this->bagDirectory}/fetch.txt",
                         $this->tagFileEncoding
                     );
